@@ -11,14 +11,14 @@ export interface ButtonProps {
 const Button = (props: ButtonProps) => {
 	return (
 		<button
-			className={`${props.className} ${
-				props.disabled ? "disabled-btn" : ""
-			}`}
-			onClick={!props.disabled ? props.onClick : undefined}
-			type={props.type}
-		>
-			{props.children}
-		</button>
+				className={`${props.className} ${
+					props.disabled ? "disabled-btn" : ""
+				}`}
+				onClick={!props.disabled ? props.onClick : undefined}
+				type={props.type}
+			>
+				{props.children}
+		</button>		
 	);
 };
 
