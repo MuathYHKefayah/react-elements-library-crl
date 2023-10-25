@@ -1,18 +1,18 @@
 {
   "name": "@MuathYHKefayah/react-elements-library-crl",
-  "version": "4.0.0",
+  "version": "16.0.0",
   "description": "Made with create-react-library",
   "author": "MuathYHKefayah",
   "license": "MIT",
   "repository": "https://github.com/MuathYHKefayah/react-elements-library-crl.git",
   "main": "dist/index.js",
-  "module": "dist/index.modern.js",
+  "module": "dist/index.cjs.js",
   "source": "src/index.tsx",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "build": "microbundle-crl build --config microbundle.config.js",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:build",
@@ -60,16 +60,20 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-storybook": "^0.6.15",
     "gh-pages": "^6.0.0",
-    "microbundle-crl": "^0.13.10",
+    "microbundle-crl": "^0.13.11",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
+    "rollup-plugin-styles": "^4.0.0",
     "storybook": "^7.5.1",
     "typescript": "^3.7.5",
-    "vite": "^4.5.0"
+    "vite": "^4.5.0",
+    "vite-plugin-react": "^4.0.1",
+    "react-toastify": "^9.1.3"
   },
+  "dependencies": {},
   "files": [
     "dist"
   ],

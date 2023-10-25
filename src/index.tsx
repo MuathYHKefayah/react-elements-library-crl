@@ -1,3 +1,4 @@
 import Button from "./Button/Button";
+import Toast from "./Toast/Toast";
 
-export { Button };
+export { Button, Toast };
