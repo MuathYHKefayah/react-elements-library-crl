@@ -1,6 +1,10 @@
 import React from 'react';
 import { useNotificationCenter } from 'react-toastify/addons/use-notification-center';
 import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './toast.css';
+import  { ReactComponent as HPLogo }  from '../svgs/hp_logo.svg'; // Import your SVG file
+
 const Toast = () => {
     const { notifications, clear, markAllAsRead, markAsRead } = useNotificationCenter();
     const showToast = () => {
@@ -29,6 +33,7 @@ const Toast = () => {
     };
     return (
         <div>
+            <HPLogo className='logo_image'/>
             <p>{notifications.length}</p>
             <button onClick={showToast}>Default</button>
             <button onClick={showSuccessToast}>Success</button>
